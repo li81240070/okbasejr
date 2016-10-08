@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hx.jrperson.ui.activity.NegotiatePriceActivity"
+    android:background="#f6f6f6">
+
+    <include layout="@layout/toolbar_view" />
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        >
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/backButtonInProvince">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/backbuttonInOrder"
+                android:background="@mipmap/bluebuttonintitle"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单详情"
+            android:textColor="#363636"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView2" />
+
+
+        <TextView
+            android:id="@+id/reashTV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/refreshindetil"
+            android:textColor="#737373"
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <!--灰色细线-->
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:id="@+id/textline"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eaeaea"
+            android:layout_below="@+id/textline"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+        <!--最大边框最上方-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+      <LinearLayout
+          android:background="#ffffff"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <!--最左侧上方栏-->
+          <RelativeLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:orientation="vertical">
+              <!--圆形头像-->
+              <com.hx.jrperson.views.widget.CircleImageView
+                  android:layout_gravity="center"
+                  android:id="@+id/price_workerHeadIV"
+                  android:layout_width="120dp"
+                  android:layout_height="120dp"
+                  android:layout_marginTop="20dp"
+                  android:src="@mipmap/headprotiart"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true" />
+              <!--查看匠人位置-->
+              <TextView
+                  android:id="@+id/lookWorkerLocation"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:drawableLeft="@mipmap/positionlogo"
+                  android:drawablePadding="1dp"
+                  android:drawableStart="@mipmap/positionlogo"
+                  android:gravity="center_vertical"
+                  android:text="@string/string_see_location"
+                  android:textColor="#494949"
+                  android:textSize="15sp"
+                  android:layout_gravity="center|bottom"
+                  android:layout_alignParentBottom="true"
+                  android:layout_alignLeft="@+id/price_workerHeadIV"
+                  android:layout_alignStart="@+id/price_workerHeadIV" />
+
+
+
+
+          </RelativeLayout>
+
+
+          <!--中间栏-->
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1.75"
+              android:orientation="vertical">
+              <!--类别分类-->
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:orientation="horizontal"
+                  >
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="类别:"
+                      android:textColor="#494949"
+                      android:textSize="15sp" />
+
+                  <TextView
+                      android:layout_marginLeft="10dp"
+                      android:id="@+id/service_nameTV"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="#494949"
+                      android:textSize="15sp" />
+
+              </LinearLayout>
+              <!--大横条分类-->
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:layout_weight="1"
+                  android:layout_marginTop="10dp"
+                  android:orientation="horizontal">
+                  <!--姓名分类-->
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_centerVertical="true"
+                      android:layout_alignParentLeft="true"
+                      android:layout_alignParentStart="true">
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent"
+                          android:text="姓名:"
+                          android:textSize="15sp"
+                          android:layout_gravity="center_vertical"
+                          android:textColor="#494949"
+                          android:gravity="center_vertical"/>
+
+              <TextView
+                  android:layout_marginLeft="10dp"
+                  android:id="@+id/price_workerNickName"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:textColor="#494949"
+                  android:textSize="15sp"
+                  tools:ignore="NestedWeights" />
+                  </LinearLayout>
+                  <FrameLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      >
+
+                  </FrameLayout>
+                  <TextView
+                      android:gravity="center"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:text="联系匠人"
+                      android:layout_marginRight="20dp"
+                        android:textColor="#494949"
+                      android:layout_alignParentTop="true"
+                      android:layout_alignParentRight="true"
+                      android:layout_alignParentEnd="true"
+                      android:id="@+id/textView3" />
+
+                  <ImageView
+                      android:id="@+id/takenPhoneIV"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_gravity="bottom"
+                      android:src="@mipmap/callphone"
+                      android:layout_alignParentTop="true"
+                      android:layout_toLeftOf="@+id/textView3"
+                      android:layout_toStartOf="@+id/textView3" />
+
+              </RelativeLayout>
+              <!--工号分类-->
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="10dp">
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:text="工号:"
+                      android:textColor="#494949"
+                      android:textSize="15sp"/>
+              <TextView
+                  android:layout_marginLeft="10dp"
+                  android:id="@+id/price_workerNumberTV"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:drawablePadding="10dp"
+                  android:gravity="center_vertical"
+                  android:textColor="#494949"
+                  android:textSize="15sp" />
+              </LinearLayout>
+              <!--时间分类-->
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="20dp"
+                  android:layout_marginBottom="20dp"
+                  >
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="时间:"
+                      android:textColor="#494949"
+                      android:textSize="15sp" />
+
+                  <TextView
+                      android:layout_marginLeft="10dp"
+                      android:id="@+id/service_timeTV"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="#494949"
+                      android:textSize="15sp" />
+              </LinearLayout>
+              <TextView
+                  android:id="@+id/cancle_ordorTV"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="20dp"
+                  android:text="取消订单"
+                  android:textColor="#737373"
+                  android:textSize="15sp"
+                  android:layout_alignTop="@+id/backbuttonInOrder"
+                  android:layout_centerHorizontal="true"
+                  android:layout_gravity="right"/>
+
+          </LinearLayout>
+
+
+
+
+
+      </LinearLayout>
+                <!--订单详情-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:background="#ffffff"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
+                android:background="#979797"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#737373"/>
+            <com.hx.jrperson.ui.activity.MyListView
+                android:id="@+id/serviceSubjectLV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"/>
+            <TextView
+                android:id="@+id/allPriceGutTV"
+                android:text="总计多少钱"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/material_red_500_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                >
+                <TextView
+                    android:id="@+id/sendMoneyIV"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@mipmap/blueball"
+                  android:gravity="center"
+                    android:text="开工"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+          
+      </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

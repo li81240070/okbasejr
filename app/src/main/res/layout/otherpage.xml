@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <include layout="@layout/toolbar_view"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+                <!--内容显示布局-->
+                <com.baidu.mapapi.map.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/rush_to_dealIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/main_rush_to_deal_marright"
+                    android:layout_marginTop="@dimen/main_rush_to_deal_martop"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_rush" />
+
+
+                <ImageView
+                    android:id="@+id/start_ball_enterIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@mipmap/ic_want_service" />
+<!--aaaaaaaaaaa-->
+                <ImageView
+                    android:id="@+id/backMainIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_back_map"
+                    android:visibility="gone" />
+
+
+                <ImageButton
+                    android:id="@+id/backMyLocationIB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="75dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@mipmap/backmyposition" />
+                <!---->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:background="#ffffff"
+                    android:layout_below="@+id/rush_to_dealIV"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@mipmap/bluebuttonintitle"
+                            android:id="@+id/myHomePageInMap"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            android:background="@mipmap/newlogo"
+                            android:id="@+id/imageView3"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/callInMyMap"
+                            android:background="@mipmap/contectus"
+                            android:layout_alignTop="@+id/myHomePageInMap"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+                <!---->
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="?attr/actionBarSize">
+
+                <RelativeLayout
+                    android:id="@+id/isGoneRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#eeeeee"
+                    android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="客服会马上联系您，请保持电话畅通..."
+                            android:textColor="#999999"
+                            android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/isNotOrdorRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#eeeeee"
+                    android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="匠人平均5-20分钟接单，请耐心等待..."
+                            android:textColor="#999999"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:src="@mipmap/ic_sun" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/receivedRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#eeeeee"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                        <com.hx.jrperson.views.widget.CircleImageView
+                            android:id="@+id/workerHeadIV"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@mipmap/ic_personal_head_img" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/workerHeadIV"
+                            android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/workerNickName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="张师傅"
+                                            android:textSize="15sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="工号 ： "
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/workerNumberTV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="8008208820"
+                                            android:textSize="15sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="电话 ： "
+                                            android:textSize="15sp" />
+
+                                        <TextView
+                                            android:id="@+id/workerPhoneTv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="13664266902"
+                                            android:textSize="15sp" />
+
+                                        <ImageView
+                                            android:id="@+id/takenPhoneIV"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:src="@mipmap/ic_worker_phone" />
+
+                                </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--返回订单-->
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/houseKeepingIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-200dp"
+                    android:layout_marginRight="-100dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/ic_clean_ball" />
+
+                <ImageView
+                    android:id="@+id/homeTrimIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-200dp"
+                    android:layout_marginRight="-100dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_ball_home_irim" />
+
+                <ImageView
+                    android:id="@+id/safeIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-200dp"
+                    android:layout_marginRight="-100dp"
+                    android:src="@mipmap/ic_monitor"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+
+                <ImageView
+                    android:id="@+id/setupIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="-200dp"
+                    android:layout_marginLeft="-100dp"
+                    android:src="@mipmap/ic_ball_setup"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+
+                <ImageView
+                    android:id="@+id/upgradleIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="-200dp"
+                    android:layout_marginLeft="-100dp"
+                    android:src="@mipmap/ic_ball_upgradle"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+
+                <ImageView
+                    android:id="@+id/reMoveIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="-200dp"
+                    android:layout_marginLeft="-100dp"
+                    android:src="@mipmap/ic_car_ball"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+
+                <ImageView
+                    android:id="@+id/eleIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="-200dp"
+                    android:layout_marginRight="-100dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_ball_ele" />
+
+
+                <ImageView
+                    android:id="@+id/waterIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="-200dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_ball_water" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/backtohome"
+                    android:text="回到首页"
+                    android:id="@+id/backToMyLiST"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+
+                <include layout="@layout/navigation_header" />
+
+        </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
+
+
+
+
+
+

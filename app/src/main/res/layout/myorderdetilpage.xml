@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="160dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@mipmap/orderback"
+        android:id="@+id/goOrderDetil"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            >
+        <!--分割线上面部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:id="@+id/orderState"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="未接单"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="#3399ff"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <TextView
+                android:id="@+id/orderPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="￥119"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/orderName"
+                android:layout_toEndOf="@+id/orderName" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:text="家电清洗"
+                android:gravity="center"
+                android:textColor="#3399ff"
+                android:id="@+id/orderName" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3399ff"/>
+        <!--下层-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约时间 :   "
+                android:textSize="15sp"
+                android:textColor="#2b2b2b"
+                android:layout_marginTop="15dp"
+                android:id="@+id/textView22" />
+            <TextView
+                android:id="@+id/orderTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-10-19    13:09"
+                android:textSize="15sp"
+                android:textColor="#333333"
+                android:layout_alignTop="@+id/textView22"
+                android:layout_toRightOf="@+id/textView22"
+                android:layout_toEndOf="@+id/textView22" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="维修地址 :   "
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textColor="#333333"
+                android:layout_below="@+id/textView22"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/textView23" />
+            <TextView
+                android:id="@+id/orderPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:text="辽宁省大连市沙河口区长兴街尚品天城12号楼2单元102"
+                android:layout_alignTop="@+id/textView23"
+                android:layout_toRightOf="@+id/textView23"
+                android:layout_toEndOf="@+id/textView23" />
+        </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

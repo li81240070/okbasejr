@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.hx.jrperson.ui.activity.ServiceGutActivity"
+    android:background="#ffffff">
+
+    <include layout="@layout/toolbar_view"/>
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#3399ff"
+
+        >
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:id="@+id/backButtonInFatherList">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButtonForListview"
+            android:background="@mipmap/bluebuttonintitle"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认订单"
+            android:id="@+id/textviewForListview"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"
+        />
+    <!--大条目滚动显示栏-->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tablayoutInChoose"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+            >
+
+
+        </android.support.design.widget.TabLayout>
+
+
+
+
+    </HorizontalScrollView>
+    <!--分割线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"/>
+
+    <!--下方总布局显示框-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="horizontal"
+    android:layout_weight="10"
+    android:id="@+id/viewpagerInChoose">
+    <!--左侧分布局显示框-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/serviceGutLV"
+        android:layout_width="0dp"
+        android:layout_weight="1.2"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"/>
+    <!--右侧大分类栏显示内容-->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="#eeeeee"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dbdbdb" />
+            <!--小分类显示内容-->
+            <com.hx.jrperson.aboutnewprogram.secondversion.LiListView
+                android:id="@+id/serviceListViewInChoose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                />
+
+            <!--说明显示内容-->
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="通用说明\n\n匠人接单成功后3-5分钟与用户电话联系\n\n维修后仔细检查并与用户一起验收\n\n验收后使用app支付\n\n材料费现金支付"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@mipmap/xuxian"/>
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="匠人承诺\n\n服务的匠人实名认证并有公安机关审核\n\n通过培训考核后上岗\n\n价格透明统一,无任何隐形费用"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
+    <!--分割线-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e8e8e8"/>
+
+    <!--下方结算栏-->
+    <!--总价格选项-->
+    <RelativeLayout
+        android:id="@+id/allPriceRL"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_negotiate_item"
+        android:layout_weight="1.2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="总价"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/ordor_gut_data"
+            android:textSize="15sp"
+            android:id="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/allPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center"
+            android:textColor="#339aff"
+            android:textSize="15sp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView8"
+            android:layout_toEndOf="@+id/textView8" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=".00元"
+            android:gravity="center"
+            android:textColor="#339aff"
+            android:textSize="15sp"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/allPriceTV"
+            android:layout_toEndOf="@+id/allPriceTV" />
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:text="     马上预约     "
+            android:gravity="center"
+            android:background="#ffa95d"
+            android:textColor="#ffffff"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/goForOrder"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

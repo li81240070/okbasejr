@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="充值"
+        android:textColor="#2b2b2b"
+        android:textSize="20sp"
+        android:id="@+id/recordName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-09-24"
+        android:textSize="18sp"
+        android:layout_below="@+id/recordName"
+        android:layout_alignLeft="@+id/recordName"
+        android:layout_alignStart="@+id/recordName"
+        android:layout_marginTop="5dp"
+        android:id="@+id/recordDate" />
+    <TextView
+        android:id="@+id/recordTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="09:30"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/recordDate"
+        android:layout_toRightOf="@+id/recordDate"
+        android:layout_toEndOf="@+id/recordDate"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/recordContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+100.00"
+        android:textSize="35sp"
+        android:textColor="#2b2b2b"
+        android:layout_alignTop="@+id/recordName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#eeeeee"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

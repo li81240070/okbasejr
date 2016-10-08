@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="#ffffff"
+    tools:context="com.hx.jrperson.ui.activity.InputAddressActivity">
+    <include layout="@layout/toolbar_view"/>
+        <!--android:id="@+id/include" />-->
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3399ff"
+        >
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/backButtonInChooses">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButtonInChoose"
+            android:background="@mipmap/bluebuttonintitle"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改地址"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <!--灰色细线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_writ"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:weightSum="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地区"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp" />
+
+
+            <EditText
+                android:id="@+id/changeAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="省份 城市 区县"
+                android:textColorHint="#a9a9a9"
+                android:background="@null"
+                android:textSize="18sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_writ"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp" />
+
+
+            <EditText
+                android:id="@+id/inputGutAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="2~60个字，且不能全部为数字"
+                android:background="@null"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:maxLength="60"
+                android:textColorHint="#a9a9a9"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_writ"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/saveAddressTV"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="保存"
+        android:gravity="center"
+        android:background="@mipmap/makesureorder"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+
+</RelativeLayout>

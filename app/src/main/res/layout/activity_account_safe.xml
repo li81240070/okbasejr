@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hx.jrperson.ui.activity.AccountSafeActivity">
+
+    <include layout="@layout/toolbar_view"/>
+    <!--标题栏-->
+    <RelativeLayout
+        android:background="#3399ff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/backButtonInPassword">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backbuttonInPassword"
+                android:background="@mipmap/bluebuttonintitle"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改密码"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <!--灰色细线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_writ"/>
+
+    <RelativeLayout
+        android:id="@+id/alterPswRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_item_hei"
+        android:padding="@dimen/ordor_item_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alter_psw"
+            android:textColor="@color/ordor_gut_data"
+            android:textSize="@dimen/setting_account_safe"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/alter_psw"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@mipmap/ic_ordor_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/setting_write_hei"
+        android:background="@color/material_grey_400"
+        android:layout_marginLeft="15dp"
+        />
+
+
+</LinearLayout>

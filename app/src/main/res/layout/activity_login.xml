@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/loginbackground"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+    <ImageView
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:background="@mipmap/jiangrenlogo"
+        android:id="@+id/imageView5"
+        android:layout_below="@+id/backMainIVBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <ImageView
+        android:id="@+id/backMainIVBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/loginback" />
+
+    <LinearLayout
+        android:id="@+id/login_area_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="120dp"
+        android:layout_below="@+id/imageView5"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/accountLL"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/graybackground"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/loginInputPhoneET"
+                android:layout_width="215dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawableLeft="@mipmap/personname"
+                android:drawablePadding="10dp"
+                android:hint="请 输 入 手 机 号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="#dbdbdc"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/graybackground"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/loginInputPswET"
+                android:layout_width="227dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:digits="@string/string_input_type"
+                android:drawableLeft="@mipmap/mypastwor"
+                android:drawablePadding="10dp"
+                android:hint="请 输 入 密 码"
+                android:inputType="textPassword"
+                android:maxLength="12"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="#dbdbdc"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/gotoRegisterTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="立即注册"
+        android:textColor="@android:color/white"
+        android:layout_alignTop="@+id/forgetPswTV"
+        android:layout_alignLeft="@+id/login_area_LL"
+        android:layout_alignStart="@+id/login_area_LL" />
+
+    <TextView
+        android:id="@+id/forgetPswTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码"
+        android:layout_marginTop="11dp"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/login_area_LL"
+        android:layout_alignRight="@+id/login_area_LL"
+        android:layout_alignEnd="@+id/login_area_LL" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/loginbutton"
+        android:text="@string/login_loginin"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:layout_marginTop="81dp"
+        android:layout_below="@+id/gotoRegisterTV"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

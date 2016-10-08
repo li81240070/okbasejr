@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0"
+    tools:context="com.hx.jrperson.ui.activity.GoRegisterNowActivity">
+
+    <include layout="@layout/toolbar_view"/>
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3399ff"
+        >
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/backButtonInRegistered">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backbuttonInRegistered"
+                android:background="@mipmap/bluebuttonintitle"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <!--灰色细线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_writ"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="为方便匠人与您联系，请验证手机"
+            android:textColor="#999999"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp">
+
+        <EditText
+            android:id="@+id/register_phoneET"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="4"
+            android:hint="@string/login_phone_hint"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:textColorHint="#d3d3d3"
+            android:background="@drawable/shape_forget_psw_edit"
+            android:paddingLeft="10dp"
+            android:numeric="integer" />
+
+        <Button
+            android:id="@+id/register_sendMessageBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:text="@string/login_yanzheng"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/shape_forget_psw_btn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <EditText
+            android:id="@+id/register_messageET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:hint="@string/login_yanzheng_hint"
+            android:maxLength="6"
+            android:textColorHint="#d3d3d3"
+            android:background="@drawable/shape_forget_not_psw_edit"
+            android:paddingLeft="10dp"
+            android:numeric="integer"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <EditText
+            android:id="@+id/register_inputNameET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:maxLength="6"
+            android:hint="@string/login_yanzheng_nickname"
+            android:textColorHint="#d3d3d3"
+            android:background="@drawable/shape_forget_not_psw_edit"
+            android:paddingLeft="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <EditText
+            android:id="@+id/register_inputPswET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:hint="@string/login_yanzheng_psw"
+            android:maxLength="12"
+            android:digits="@string/string_input_type"
+            android:textColorHint="#d3d3d3"
+            android:background="@drawable/shape_forget_not_psw_edit"
+            android:paddingLeft="10dp"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <EditText
+            android:id="@+id/register_putPswTwoET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:hint="@string/login_yanzheng_psw_two"
+            android:digits="@string/string_input_type"
+            android:textColorHint="#d3d3d3"
+            android:maxLength="12"
+            android:background="@drawable/shape_forget_not_psw_edit"
+            android:paddingLeft="10dp"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register_nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="注册并开始使用"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/shape_forget_psw_btn" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/legalExplanationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_xieyi_start"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/color_yelow"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

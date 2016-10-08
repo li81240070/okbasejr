@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--顶部滑动页加搜索框-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/mainViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                </android.support.v4.view.ViewPager>
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/searchbg"
+                    android:drawableLeft="@mipmap/searchinmain"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="搜索维修内容"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:id="@+id/editText" />
+                <!--搜索框内容-->
+                <ListView
+                    android:id="@+id/searchResult"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@+id/editText"
+                    android:layout_alignLeft="@+id/editText"
+                    android:layout_alignStart="@+id/editText"></ListView>
+            </RelativeLayout>
+            <!--各个分页入口选项-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerInMain"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#ffffff"
+
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+            <!--今日秒杀活动-->
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+                <!--文字栏-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/secondContrl"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="20dp"
+                        android:background="#868686"
+                        android:gravity="center"
+                        android:text="01"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/secondContrl"
+                        android:layout_toStartOf="@+id/secondContrl" />
+
+                    <TextView
+                        android:id="@+id/minutesContrl"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/textView29"
+                        android:layout_toStartOf="@+id/textView29"
+                        android:background="#868686"
+                        android:gravity="center"
+                        android:text="01"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text=":"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/minutesContrl"
+                        android:layout_toStartOf="@+id/minutesContrl" />
+
+                    <TextView
+
+                        android:id="@+id/hourContrl"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toLeftOf="@+id/textView31"
+                        android:layout_toStartOf="@+id/textView31"
+                        android:background="#868686"
+                        android:gravity="center"
+                        android:text="01"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/hourContrl"
+                        android:layout_toStartOf="@+id/hourContrl"
+                        android:gravity="center"
+                        android:text="距开始"
+                        android:textColor="#868686"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="今日秒杀"
+                        android:textColor="#fe6869"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+                <!--下部内容-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal">
+                    <!--图片位置-->
+                    <RelativeLayout
+                        android:layout_width="140dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/ic_launcher" />
+
+
+                    </RelativeLayout>
+                    <!--文字内容-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="洗衣机清洗服务(不限型号)"
+                            android:textColor="#333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="提供上门优质服务"
+                            android:textColor="#868686"
+                            android:textSize="15sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp">
+
+                            <TextView
+                                android:id="@+id/textView33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥98"
+                                android:textColor="#fe6869"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toEndOf="@+id/textView33"
+                                android:layout_toRightOf="@+id/textView33"
+                                android:src="@mipmap/lowpice" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toEndOf="@+id/textView33"
+                                android:layout_toRightOf="@+id/textView33"
+                                android:text="￥198"
+                                android:textColor="#868686"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#eeeeee" />
+            <!--今日推荐-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="今日推荐"
+                        android:textColor="#fe6869"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/todaySurprise"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

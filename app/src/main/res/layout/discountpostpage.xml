@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/noneData"
+        android:visibility="gone"
+        android:background="#f1edee"
+
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/myruabit"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="132dp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.hx.jrperson.aboutnewprogram.preferential.PostCardList
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/discountPostListview"
+                ></com.hx.jrperson.aboutnewprogram.preferential.PostCardList>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#f1edee"
+                android:id="@+id/lookOverData">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="没有更多有效券了 | 查看过期券/已用券  >>"
+                    android:textSize="15sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#f1edee"
+                android:id="@+id/getOut"
+                />
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

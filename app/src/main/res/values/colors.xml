@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--第二次更新颜色-->
+    <color name="licolor">#eeeeee</color>
+
+
+    <!--登录界面-->
+    <color name="login_area_bg">#96ccff</color>
+    <color name="login_bt_white">#fff</color>
+    <color name="name_text_blue">#47a2ff</color>
+
+    <!-- toobar -->
+    <color name="toolbar">#47a2ff</color>
+    <color name="toolbar_title">#ffffff</color>
+    <!-- ordor -->
+    <color name="ordor_gut_data">#666666</color>
+    <!-- setting -->
+    <color name="view_writ">#dcdcdc</color>
+
+    <!-- personal -->
+    <color name="textColor">#999999</color>
+    <color name="textRightColor">#333333</color>
+
+    <color name="province_line_border">#C7C7C7</color>
+
+    <!-- **************** RED ******************
+  -->
+    <color name="material_red_500_primary">#f44336</color>
+    <color name="material_red_100">#ffcdd2</color>
+    <color name="material_red_200">#ef9a9a</color>
+    <color name="material_red_300">#e57373</color>
+    <color name="material_red_400">#ef5350</color>
+    <color name="material_red_600">#e53935</color>
+    <color name="material_red_700">#d32f2f</color>
+    <color name="material_red_800">#c62828</color>
+    <color name="material_red_900">#b71c1c</color>
+    <color name="material_red_A200">#80FF5252</color>
+    - <!-- *************** PINK ******************
+  -->
+    <color name="material_pink_500_primary">#e91e63</color>
+    <color name="material_pink_50">#fce4ec</color>
+    <color name="material_pink_100">#f8bbd0</color>
+    <color name="material_pink_200">#f48fb1</color>
+    <color name="material_pink_300">#f06292</color>
+    <color name="material_pink_400">#ec407a</color>
+    <color name="material_pink_600">#d81b60</color>
+    - <!-- *************** PURPLE ****************
+  -->
+    <color name="material_purple_500_primary">#9c27b0</color>
+    <color name="material_purple_50">#f3e5f5</color>
+    <color name="material_purple_100">#e1bee7</color>
+    <color name="material_purple_200">#ce93d8</color>
+    <color name="material_purple_300">#ba68c8</color>
+    <color name="material_purple_400">#ab47bc</color>
+    <color name="material_purple_600">#8e24aa</color>
+    - <!-- *************** BLUE ******************
+  -->
+    <color name="material_blue_500_primary">#2196f3</color>
+    <color name="material_blue_50">#e3f2fd</color>
+    <color name="material_blue_100">#e3f2fd</color>
+    <color name="material_blue_200">#90caf9</color>
+    <color name="material_blue_300">#64b5f6</color>
+    <color name="material_blue_400">#42a5f5</color>
+    <color name="material_blue_600">#1e88e5</color>
+    <color name="material_blue_A200">#80448Aff</color>
+    - <!-- *************** GREEN ******************
+  -->
+    <color name="material_green_500_primary">#4caf50</color>
+    <color name="material_green_50">#e8f5e9</color>
+    <color name="material_green_100">#c8e6c9</color>
+    <color name="material_green_200">#a5d6a7</color>
+    <color name="material_green_300">#81c784</color>
+    <color name="material_green_400">#66bb6a</color>
+    <color name="material_green_600">#43a047</color>
+    - <!-- *************** GREY ******************
+  -->
+    <color name="material_grey_50">#fafafa</color>
+    <color name="material_grey_100">#f5f5f5</color>
+    <color name="material_grey_200">#f0f0f0</color>
+    <color name="material_grey_300">#e0e0e0</color>
+    <color name="material_grey_400">#bdbdbd</color>
+    <color name="material_grey_600" tools:ignore="PrivateResource">#757575</color>
+    <color name="material_grey_800" tools:ignore="PrivateResource">#424242</color>
+    - <!--  Other Material colors
+  -->
+    <color name="material_black">#000000</color>
+    <color name="material_white">#ffffff</color>
+    <color name="md_material_blue_600">#1E88E5</color>
+
+    <color name="color_yelow">#c59944</color>
+
+    <!-- Exceptions colors -->
+    <color name="dynamicbox_exception_button_color">#5fcf80</color>
+    <color name="dynamicbox_exception_button_color_second">#35c460</color>
+    <color name="dynamicbox_exception_title_color">#ff6a7983</color>
+    <color name="dynamicbox_exception_message_color">#8c989e</color>
+
+</resources>

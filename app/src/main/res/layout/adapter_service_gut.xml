@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/changeMeToGray"
+    >
+
+    <RelativeLayout
+        android:id="@+id/itemServiceRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:background="@null"
+        >
+
+        <TextView
+            android:id="@+id/service_subkect_nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="水龙头"
+            android:textColor="#535353"
+            android:background="@null"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignParentBottom="true"
+        android:background="#eeeeee" />
+
+</RelativeLayout>

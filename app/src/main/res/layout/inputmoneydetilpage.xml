@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="140dp"
+    android:layout_height="70dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:id="@+id/introduceBack"
+    android:background="@mipmap/notchoosemoney">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="冲100送10元\n售价100元"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#868686"
+        android:id="@+id/chooseHowMuch"/>
+
+</LinearLayout>

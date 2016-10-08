@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_personal_order"
+            android:icon="@mipmap/ic_personal_order"
+            android:title="我的订单"></item>
+        <item
+            android:id="@+id/item_personal_liucheng"
+            android:icon="@mipmap/ic_personal_liucheng"
+            android:title="服务流程"></item>
+        <item
+            android:id="@+id/item_personal_biaozhun"
+            android:icon="@mipmap/ic_personal_biaozhun"
+            android:title="维修标准"></item>
+        <item
+            android:id="@+id/item_personal_set"
+            android:icon="@mipmap/ic_personal_set"
+            android:title="设置"></item>
+        <item
+            android:id="@+id/item_personal_about_us"
+            android:icon="@mipmap/ic_personal_about_us"
+            android:title="关于我们"></item>
+        <item
+            android:id="@+id/item_out_login"
+            android:title="退出登录"></item>
+    </group>
+
+</menu>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="#f1edee"
+    android:orientation="vertical"
+    android:id="@+id/chooseMeMe">
+    <!--优惠券上半部分-->
+
+    <RelativeLayout
+        android:id="@+id/postBackValue"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/valueback">
+        <!--优惠面额-->
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/postpriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="8.5折"
+            android:textColor="#3399ff"
+            android:textSize="50sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <!--优惠券使用名称-->
+        <TextView
+            android:id="@+id/postnameValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="新用户首单抵值券"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/postpriceValue"
+            android:layout_toEndOf="@+id/postpriceValue" />
+
+        <TextView
+            android:id="@+id/postUseRule1Value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 结算时满80使用"
+            android:textColor="#a7a7a7"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="47dp"
+            android:layout_marginEnd="47dp"
+            android:layout_below="@+id/postnameValue"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/postUseRule2Value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 水暖维修专用"
+            android:layout_marginTop="10dp"
+            android:textColor="#a7a7a7"
+            android:textSize="15sp"
+            android:layout_below="@+id/postUseRule1Value"
+            android:layout_alignLeft="@+id/postUseRule1Value"
+            android:layout_alignStart="@+id/postUseRule1Value" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@mipmap/xuxuxian"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ffffff"
+        android:layout_below="@+id/postBackValue"
+        android:layout_alignLeft="@+id/postBackValue"
+        android:layout_alignStart="@+id/postBackValue">
+
+        <Button
+            android:id="@+id/postStateValue"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:background="@mipmap/zengsong_blue"
+            android:text="可赠送"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/postDataStartValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:drawableLeft="@mipmap/datasign2"
+            android:drawablePadding="3dp"
+            android:text="2016.08.01"
+            android:textColor="#b6b6b6"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/postStateValue"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp" />
+
+        <TextView
+            android:id="@+id/postEndDataValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016.08.01"
+            android:textColor="#b6b6b6"
+            android:textSize="16sp"
+            android:layout_alignBottom="@+id/postLineValue"
+            android:layout_toRightOf="@+id/postLineValue"
+            android:layout_toEndOf="@+id/postLineValue" />
+
+        <TextView
+            android:id="@+id/postLineValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="#b6b6b6"
+            android:textSize="20sp"
+            android:layout_alignBottom="@+id/postDataStartValue"
+            android:layout_toRightOf="@+id/postDataStartValue"
+            android:layout_toEndOf="@+id/postDataStartValue" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/isOverValue"
+        android:visibility="gone"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@mipmap/guoqi"
+        android:layout_marginRight="95dp"
+        android:layout_marginEnd="95dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentEnd="true" />
+
+
+</LinearLayout>

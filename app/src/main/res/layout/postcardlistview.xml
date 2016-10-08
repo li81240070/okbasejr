@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:background="#f1edee"
+    android:orientation="vertical"
+    android:id="@+id/chooseMe"
+    >
+    <!--优惠券上半部分-->
+
+    <RelativeLayout
+        android:id="@+id/postBack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@mipmap/detilpostfirst">
+        <!--优惠面额-->
+        <TextView
+            android:id="@+id/postprice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="￥99"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff"
+            android:textSize="50sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <!--优惠券使用名称-->
+        <TextView
+            android:id="@+id/postname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="新用户首单抵值券"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/postprice"
+            android:layout_toEndOf="@+id/postprice" />
+
+        <TextView
+            android:id="@+id/postDataStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/postname"
+            android:layout_alignStart="@+id/postname"
+
+            android:layout_below="@+id/postname"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/datasign2"
+            android:drawablePadding="3dp"
+            android:text="2016.08.01"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/postLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/postDataStart"
+            android:layout_toEndOf="@+id/postDataStart"
+            android:layout_toRightOf="@+id/postDataStart"
+            android:text="-"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/postEndData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/postLine"
+            android:layout_toEndOf="@+id/postLine"
+            android:layout_toRightOf="@+id/postLine"
+            android:text="2016.08.01"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:layout_below="@+id/postBack"
+        android:layout_alignLeft="@+id/postBack"
+        android:layout_alignStart="@+id/postBack">
+
+        <TextView
+            android:id="@+id/postUseRule1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="5dp"
+            android:text="1 结算时满80使用"
+            android:textColor="#a7a7a7"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/postUseRule2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/postUseRule1"
+            android:layout_alignStart="@+id/postUseRule1"
+            android:layout_below="@+id/postUseRule1"
+            android:layout_marginTop="3dp"
+            android:text="2 水暖维修专用"
+            android:textColor="#a7a7a7"
+            android:textSize="15sp" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/postState"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:background="@mipmap/cansendback"
+            android:text="可赠送"
+            android:textSize="15sp"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/isOver"
+        android:visibility="gone"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@mipmap/guoqi"
+        android:layout_marginRight="95dp"
+        android:layout_marginEnd="95dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentEnd="true" />
+
+
+
+</RelativeLayout>

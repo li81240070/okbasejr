@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="toolbar_img_mar_right">20dp</dimen>
+    <dimen name="toobar_title">20sp</dimen>
+
+    <!-- my ordor -->
+    <dimen name="myordor_item_hei">190dp</dimen>
+    <dimen name="ordor_item_padding">15dp</dimen>
+    <dimen name="ordor_gut_data_text_size">15sp</dimen>
+    <dimen name="setting_item_hei">50dp</dimen>
+
+    <!-- setting -->
+    <dimen name="setting_account_safe">15sp</dimen>
+    <dimen name="setting_view_write_hei">10dp</dimen>
+    <dimen name="setting_write_hei">1px</dimen>
+    <dimen name="main_rush_to_deal_martop">20dp</dimen>
+    <dimen name="main_rush_to_deal_marright">20dp</dimen>
+    <dimen name="start_ball_mar_bottom">30dp</dimen>
+
+    <dimen name="avatar_radius">60dp</dimen>
+</resources>

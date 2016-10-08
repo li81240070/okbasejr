@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#3399ff">
+
+        <RelativeLayout
+            android:id="@+id/backButtonInOverData"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/backbuttonInOverData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/bluebuttonintitle" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="过期、已用抵值券"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <!--灰色细线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_writ" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.hx.jrperson.aboutnewprogram.preferential.PostCardList
+            android:id="@+id/overDataValueCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.hx.jrperson.aboutnewprogram.preferential.PostCardList>
+    </ScrollView>
+
+
+
+</LinearLayout>

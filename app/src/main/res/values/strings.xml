@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">真匠人</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- 程序的string资源文件-->
+    <string name="baseactivity_title">标题栏</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."
+    </string>
+
+    <!--登录界面的字符串资源-->
+    <string name="login_loginin">登录</string>
+    <string name="login_use_hint">请输入手机号</string>
+    <string name="login_pwd_hint">请输入密码</string>
+    <string name="login_title">您身边的专业维修管家</string>
+    <string name="login_register">立即注册？</string>
+    <string name="login_forgetpwd">忘记密码？</string>
+    <string name="login_phone_hint">手机号</string>
+    <string name="login_yanzheng">验证</string>
+    <string name="login_yanzheng_hint">验证码</string>
+    <string name="login_yanzheng_psw">请输入6-12位密码</string>
+    <string name="login_yanzheng_nickname">请填写昵称，方便匠人与您沟通</string>
+    <string name="login_yanzheng_psw_two">再次输入密码</string>
+    <string name="login_begin">下一步</string>
+    <string name="login_xieyi_start">点击注册，即表示同意《法律声明及隐私条款》</string>
+    <string name="login_enter_newpwd">请输入新密码</string>
+    <string name="login_enteragin_newpwd">再次输入新密码</string>
+    <string name="login_sure">确定</string>
+    <string name="alter_nick_name">请输入昵称</string>
+    <string name="alter_sign">描述详情，不超过24个字</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="service_help_phone">0411-84542809</string>
+    <string name="versions">版本信息</string>
+    <string name="versions_number">v1.111</string>
+    <string name="idea_back">意见反馈</string>
+    <string name="about_us">关于我们</string>
+    <string name="account_safe_phone">手机号</string>
+    <string name="approve_name">实名认证</string>
+    <string name="approve_name_gut">未认证</string>
+    <string name="alter_psw">修改密码</string>
+
+    <!--share-->
+    <string name="share">分享</string>
+    <string name="complain">投诉</string>
+    <string name="share_to">分享到</string>
+    <string name="share_to_circle">朋友圈</string>
+    <string name="share_to_wechat">微信好友</string>
+    <string name="share_success">分享成功</string>
+    <string name="share_cancel">取消分享</string>
+    <string name="share_fail">分享失败</string>
+    <string name="share_unknow">未知原因</string>
+
+    <!-- 上下拉刷新 -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+
+    <!-- 消除警告，可忽略 -->
+    <string name="d">图片描述</string>
+
+    <string name="toast_input_address">详细地址需要输入2-60个字</string>
+    <string name="toast_input_address_gut">请输入详细地址</string>
+    <string name="toast_input_address_change">请选择省市区</string>
+    <string name="my_orders">我的订单</string>
+    <string name="service_flow">服务流程</string>
+    <string name="fix_standard">维修标准</string>
+    <string name="system_settings">系统设置</string>
+    <string name="quit_account">退出账号</string>
+    <string name="string_time">时间：</string>
+
+    <string name="empty_string">empty</string>
+    <string name="dynamicbox_retry">Retry</string>
+
+    <string name="dynamicbox_loading_title" />
+    <string name="dynamicbox_loading_message" />
+
+    <string name="dynamicbox_internet_off_title">Error</string>
+    <string name="dynamicbox_internet_off_message">Internet is off, please enable it</string>
+
+    <string name="dynamicbox_exception_title">Error</string>
+    <string name="dynamicbox_exception_message">An error has occurred, retry again</string>
+    <string name="string_no_orders">暂无订单</string>
+    <string name="string_temp_none">暂无</string>
+    <string name="string_see_location">查看匠人位置</string>
+    <string name="string_attention">提示</string>
+    <string name="string_start_verify">开始验证</string>
+
+    <string name="string_input_type"><![CDATA[1234567890&`-=~!@#$%^*()_+qwertyuiop[]QWERTYUIOP{?}asdfghjkl;\ASDFGHJKL:|zxcvbnm,./ZXCVBNM]]></string>
+</resources>

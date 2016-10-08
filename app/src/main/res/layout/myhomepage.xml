@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--包裹布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--头像布局-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#3399ff">
+
+                <com.hx.jrperson.utils.CircleImage
+                    android:id="@+id/goChangeMine"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@mipmap/testpicture"
+                    />
+
+                <TextView
+                    android:id="@+id/yourName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/goChangeMine"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="兔子"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/yourSay"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/yourName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="说点什么吧"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/goMySetting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="12dp"
+                    android:background="@mipmap/settingbutton" />
+
+            </RelativeLayout>
+            <!--余额/抵值券/优惠卡显示-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+                <!--余额显示栏-->
+                <RelativeLayout
+                    android:id="@+id/firstModel"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/leftmoney" />
+
+                    <TextView
+                        android:id="@+id/howManyIHave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView6"
+                        android:layout_centerHorizontal="true"
+                        android:text="暂无数据"
+                        android:textColor="#333333"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+                <!--分割线-->
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#eeeeee" />
+                <!--抵值券显示栏-->
+                <RelativeLayout
+                    android:id="@+id/secondModel"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/vouchers"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/vouchers" />
+
+                    <TextView
+                        android:id="@+id/postCardNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vouchers"
+                        android:layout_centerHorizontal="true"
+                        android:text="暂无数据"
+                        android:textColor="#333333"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+                <!--分割线-->
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#eeeeee" />
+                <!--抵值券显示栏-->
+                <RelativeLayout
+                    android:id="@+id/thirdModel"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/discountCard"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/discountcard" />
+
+                    <TextView
+                        android:id="@+id/valueCardNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/discountCard"
+                        android:layout_centerHorizontal="true"
+                        android:text="暂无数据"
+                        android:textColor="#333333"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#eeeeee" />
+            <!--我的钱包-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/goMyWollet">
+                <!--前往余额页面按钮-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/goright2"
+                    android:gravity="center"
+                    android:text="余额、充值"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@mipmap/yourwollet"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="我的钱包"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#eeeeee" />
+            <!--我的卡券-->
+            <RelativeLayout
+                android:id="@+id/goMyPostCard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+                <!--前往卡券页面按钮-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/goright2"
+                    android:gravity="center"
+                    android:text="抵值券、折扣卡"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@mipmap/yourdiscount"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="我的卡券"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#eeeeee" />
+            <!--我的订单-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/goMyOrder">
+                <!--前往我的订单页面按钮-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/goright2"
+                    android:gravity="center"
+                    android:text="         "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@mipmap/myorderinmine"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="我的订单"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#eeeeee" />
+            <!--邀请有奖及服务流程-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <!--前往余额页面按钮-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/goright2"
+                    android:gravity="center"
+                    android:text="       "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@mipmap/helpisvalue"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="邀请有奖"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#eeeeee" />
+            <!--我的卡券-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/goMyServerState">
+                <!--前往卡券页面按钮-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/goright2"
+                    android:gravity="center"
+                    android:text="       "
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@mipmap/servershelp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="服务流程"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#eeeeee" />
+            <!--联系客服-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <!--前往我的订单页面按钮-->
+                <TextView
+                    android:id="@+id/callUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@mipmap/iphone7"
+                    android:gravity="center"
+                    android:text="0411-84542809"
+                    android:textColor="#3399ff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@mipmap/contectmine"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="联系客服"
+                    android:textColor="#3399ff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#eeeeee" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--竖版总滑动条-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--滑动条下总布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--标题栏-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:background="@mipmap/backbutton"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确认订单"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <!--灰色细线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e8e8e8"
+                />
+            <!--维修地址及更改文字-->
+            <LinearLayout
+                android:id="@+id/inputAddressRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_negotiate_item"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="当前地址"
+                        android:textColor="@color/ordor_gut_data"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/nowAddressTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="3dp"
+                        android:text="更改"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/addressTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/ordor_gut_data"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+            <!--大灰色分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f7f5f6"/>
+            <!--项目简述标题-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent"
+                android:text="安装维修"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/moretofind"/>
+            </LinearLayout>
+            <!--灰色细线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e8e8e8"
+                />
+            <!--服务标准详细内容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="服务标准"
+                    android:textColor="@color/material_black"
+                    android:textSize="15sp" />
+
+                <com.hx.jrperson.views.PersonalListView
+                    android:id="@+id/service_normLV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp" />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e8e8e8"
+                />
+            <!--总价选项栏-->
+            <RelativeLayout
+                android:id="@+id/priceRL"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:text="总价按品项最低价格计算"
+                    android:textColor="@color/material_grey_600"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--细分价格选项-->
+            <TextView
+                android:id="@+id/titleMyHomeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="装修工程师免费上门量房、设计、报价"
+                android:visibility="gone" />
+
+
+            <com.hx.jrperson.views.PersonalListView
+                android:id="@+id/issue_ordor_gutLV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" />
+
+            <!--总价格选项-->
+            <RelativeLayout
+                android:id="@+id/allPriceRL"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_negotiate_item"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="总价"
+                    android:textColor="@color/ordor_gut_data"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/allPriceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.00元"
+                    android:textColor="@color/color_yelow"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--大灰色分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f7f5f6"/>
+            <!--预约时间选项-->
+            <RelativeLayout
+                android:id="@+id/changeTimeRL"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_negotiate_item"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/showTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="预约时间"
+                    android:textColor="@color/ordor_gut_data"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/timeOrdorTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/showTV"
+                    android:text="点击选择时间"
+                    android:textColor="@color/ordor_gut_data"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--灰色细线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e8e8e8"
+                />
+            <!--指定匠人功能-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_negotiate_item"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="指定匠人"
+                    android:textColor="@color/ordor_gut_data"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/cenWrite"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/textColor" />
+
+                <EditText
+                    android:id="@+id/appointET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/cenWrite"
+                    android:background="@null"
+                    android:textCursorDrawable="@color/md_material_blue_600"
+                    android:hint="请输入工号"
+                    android:inputType="number"
+                    android:textColor="@color/ordor_gut_data"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/ic_clear"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <!--指定匠人详细说明-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/toastTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="主要材料由客户事先准备好，如需高处作业，客户提供登高用具，匠人可以代买主材。"
+                    android:textColor="#da4f4a"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+            <!--大灰色分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f7f5f6"/>
+            <RelativeLayout
+                android:id="@+id/describeLL"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/shape_negotiate_item"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:padding="15dp">
+
+                <EditText
+                    android:id="@+id/userComminET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|top"
+                    android:background="@null"
+                    android:hint="描述详情，不超过50个字"
+                    android:maxLength="50"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+            <!--大灰色分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f7f5f6"/>
+            <!--添加图片选项-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="最多添加四张图片，长按可删除图片"
+                    android:textColor="#da4f4a"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/canclePhotoBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_send_ordor_btn"
+                    android:text="取消"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <!--填选图片-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/addPhotoRV"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+            <!--灰色细线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e8e8e8"
+                />
+            <!--确认下单-->
+            <ImageButton
+                android:id="@+id/creatBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/makesurebutton" />
+            
+            
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+</LinearLayout>

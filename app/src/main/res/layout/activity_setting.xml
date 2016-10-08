@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eeeeee"
+    tools:context="com.hx.jrperson.ui.activity.SettingActivity">
+
+    <include layout="@layout/toolbar_view"/>
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout"
+        android:background="#3399ff">
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/backButtonInMySetting">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/backbuttonInMySetting"
+                android:background="@mipmap/bluebuttonintitle"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <!--灰色细线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/view_writ"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#eeeeee"/>
+
+            <RelativeLayout
+                android:id="@+id/account_safeRL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_hei"
+                android:padding="@dimen/ordor_item_padding"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账号与安全"
+                    android:textColor="@color/material_black"
+                    android:textSize="@dimen/setting_account_safe"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_ordor_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#eeeeee"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_write_hei"
+                android:background="@color/material_grey_400"
+                android:layout_marginLeft="15dp"
+                />
+
+            <!--维修标准与-->
+            <RelativeLayout
+                android:id="@+id/serverStateForCom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_hei"
+                android:padding="@dimen/ordor_item_padding"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="维修标准"
+                    android:textColor="@color/material_black"
+                    android:textSize="@dimen/setting_account_safe"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_ordor_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_write_hei"
+                android:background="@color/material_grey_400"
+                android:layout_marginLeft="15dp"
+                />
+            <!--服务流程-->
+            <RelativeLayout
+                android:id="@+id/serverPrograss"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_hei"
+                android:padding="@dimen/ordor_item_padding"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="服务流程"
+                    android:textColor="@color/material_black"
+                    android:textSize="@dimen/setting_account_safe"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_ordor_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/helpRL"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_hei"
+                android:padding="@dimen/ordor_item_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客服与帮助"
+                    android:textColor="@color/material_black"
+                    android:textSize="@dimen/setting_account_safe"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/service_help_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/service_help_phone"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/custom_service_phoneTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/setting_account_safe"
+                    android:layout_toLeftOf="@id/service_help_phone"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_view_write_hei"
+                android:background="@color/material_grey_300"/>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_write_hei"
+                android:background="@color/material_grey_400"
+                android:layout_marginLeft="15dp"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/idearBackRL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_hei"
+                android:padding="@dimen/ordor_item_padding"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/idea_back"
+                    android:textColor="@color/material_black"
+                    android:textSize="@dimen/setting_account_safe"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@mipmap/ic_ordor_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_write_hei"
+                android:background="@color/material_grey_400"
+                android:layout_marginLeft="15dp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/aboutUsCom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_hei"
+                android:padding="@dimen/ordor_item_padding"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关于我们"
+                    android:textColor="@color/material_black"
+                    android:textSize="@dimen/setting_account_safe"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@mipmap/ic_ordor_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_write_hei"
+                android:background="@color/material_grey_400"
+                android:layout_marginLeft="15dp"
+                />
+
+            <RelativeLayout
+                android:background="#ffffff"
+                android:id="@+id/versionsRL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_hei"
+                android:padding="@dimen/ordor_item_padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/versions"
+                    android:textColor="@color/material_black"
+                    android:textSize="@dimen/setting_account_safe"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/nowVersionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/setting_account_safe" />
+
+            </RelativeLayout>
+            <!--退出登录按钮-->
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="50dp">
+              <TextView
+                  android:id="@+id/backNoneLogin"
+                  android:background="#ffffff"
+                  android:layout_width="match_parent"
+                  android:layout_marginLeft="40dp"
+                  android:layout_marginRight="40dp"
+                  android:layout_height="50dp"
+                  android:text="退出登录"
+                  android:textColor="#3399ff"
+                  android:textSize="18sp"
+                  android:gravity="center"
+                  android:layout_alignParentTop="true"
+                  android:layout_centerHorizontal="true" />
+          </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/byeChoose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+        <!--标题栏-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#3399ff">
+
+            <RelativeLayout
+                android:id="@+id/backButtonInWollet"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:id="@+id/backbuttonInWollet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@mipmap/bluebuttonintitle" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:layout_centerVertical="true"
+                android:text="我的钱包"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/recordForWollet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="记录"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+        <!--显示当前余额的模块-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView16"
+                android:layout_centerHorizontal="true"
+                android:text="当前余额"
+                android:textColor="#2b2b2b"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView18"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="____"
+                android:textColor="#3399ff"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:drawableLeft="@mipmap/helpmark"
+                android:drawablePadding="5dp"
+                android:text="钱包规则" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:background="#eeeeee" />
+
+        </RelativeLayout>
+        <!--手动输入充值金额界面-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2">
+
+            <EditText
+                android:id="@+id/userGive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/inputbackround"
+                android:hint="手动输入充值金额"
+                android:numeric="integer"
+                android:paddingLeft="10dp"
+                android:textSize="15sp" />
+        </RelativeLayout>
+        <!--显示充值选项页面-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/inputMoneyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+        <!--选择支付方式页面-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="选择支付方式"
+                android:textColor="#2b2b2b"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/changeChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@mipmap/weixin"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/changeword"
+                android:gravity="center"
+                android:text="微信支付" />
+
+        </RelativeLayout>
+        <!--下方整体部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7">
+            <!--充值按钮-->
+            <Button
+                android:id="@+id/giveMoneyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@mipmap/btnblue"
+                android:text="立即充值"
+                android:textColor="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/giveMoneyButton"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/button"
+                    android:layout_alignStart="@+id/button"
+                    android:layout_below="@+id/button"
+                    android:text="点击立即充值,即表明你已同意" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView19"
+                    android:layout_toEndOf="@+id/textView19"
+                    android:layout_toRightOf="@+id/textView19"
+                    android:text="充值协议"
+                    android:textColor="#3399ff" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--弹出框-->
+    <LinearLayout
+        android:id="@+id/popUp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <!--选择微信支付-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+
+        <RelativeLayout
+            android:id="@+id/chooseWeixin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="39dp"
+                android:layout_marginStart="39dp"
+                android:drawableLeft="@mipmap/wxinchoose"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="微信支付"
+                android:textColor="#3b3b3b"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/weixinAllRight"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="44dp"
+                android:layout_marginRight="44dp"
+                android:background="@mipmap/xz" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee" />
+        <!--选择支付宝支付-->
+        <RelativeLayout
+            android:id="@+id/chooseZhifubao"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/zhifubaoPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="39dp"
+                android:layout_marginStart="39dp"
+                android:drawableLeft="@mipmap/zfb"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="微信支付"
+                android:textColor="#3b3b3b"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/zhifubaoAllRight"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="44dp"
+                android:layout_marginRight="44dp"
+                android:background="@mipmap/xz"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

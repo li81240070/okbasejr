@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/firstPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_rush_btn"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/pop_window_head_photeBT"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/material_white"
+            android:text="拍照"
+            android:textColor="@color/material_blue_500_primary" />
+
+        <View
+            android:id="@+id/divider02"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/material_grey_400" />
+
+        <Button
+            android:id="@+id/pop_window_head_audioBT"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/material_white"
+            android:text="相册"
+            android:textColor="@color/material_blue_500_primary" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider01"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#00000000" />
+
+    <LinearLayout
+        android:id="@+id/secPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_rush_btn"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/pop_window_head_cancleBT"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/material_white"
+            android:text="取消"
+            android:textColor="@color/material_blue_500_primary" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#00000000" />
+</LinearLayout>
